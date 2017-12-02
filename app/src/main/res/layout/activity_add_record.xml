@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddRecordActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextStyleNormalBold24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/record_time_start" />
+
+        <TextView
+            android:id="@+id/tvTimeStart"
+            style="@style/TextStyleNormal24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="onClickStartTime"
+            android:text="@string/not_check"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            style="@style/TextStyleNormalBold24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/record_time_end" />
+
+        <TextView
+            android:id="@+id/tvTimeEnd"
+            style="@style/TextStyleNormal24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="onClickEndTime"
+            android:text="@string/not_check"
+            android:textColor="@color/colorAccent" />
+
+
+        <TextView
+            style="@style/TextStyleNormalBold24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/record_duration" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etDurationHour"
+                style="@style/TextStyleNormal24"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:enabled="false"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/TextStyleNormal24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hours" />
+
+            <EditText
+                android:id="@+id/etDurationMinutes"
+                style="@style/TextStyleNormal24"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/TextStyleNormal24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minutes" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFiveMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onBtnClickFiveMin"
+                android:text="@string/btn_5min"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_choose_time"
+                style="@style/TextStyleNormalBold20"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/btnFifteenMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onBtnClickFifteenMin"
+                android:text="@string/btn_15min"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_choose_time"
+                style="@style/TextStyleNormalBold20"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/btnThirtyMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onBtnClickThirtyMin"
+                android:text="@string/btn_30min"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_choose_time"
+                style="@style/TextStyleNormalBold20"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnOneHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onBtnClickOneHour"
+                android:text="@string/btn_1hour"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_choose_time"
+                style="@style/TextStyleNormalBold20"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/btnOneHourThirty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onBtnClickOneHourThirtyMin"
+                android:text="@string/btn_1hour_30min"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_choose_time"
+                style="@style/TextStyleNormalBold20"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/btnTwoHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onBtnClickTwoHour"
+                android:text="@string/btn_2hour"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_choose_time"
+                style="@style/TextStyleNormalBold20"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/TextStyleNormalBold24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/record_category" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChooseCategoryForRecord"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivCategoryIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/edit_image" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                style="@style/TextStyleNormal24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="@string/not_check" />
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/TextStyleNormalBold24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/record_description" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            style="@style/TextStyleNormal24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextStyleNormalBold24"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/photos"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/ivAddPhoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/attach"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/lvPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:scrollbars="vertical">
+
+        </ListView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/TextStyleNormalBold20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="0"
+        android:background="@drawable/button_activated"
+        android:onClick="onClickSave"
+        android:text="@string/save" />
+
+
+</LinearLayout>
